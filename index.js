@@ -1,4 +1,6 @@
-const emotes = require('./emotes.json');
+const emotes = fetch("https://raw.githubusercontent.com/The1Penguin/kaomoji/main/emotes.json")
+    .then(res => res.json())
+    .catch(err => throw err);
 const { Plugin } = require('powercord/entities');
 
 
